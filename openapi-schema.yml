@@ -1,0 +1,490 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /api/alldata/:
+    get:
+      operationId: listMebels
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Mebel'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createMebel
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Mebel'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Mebel'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Mebel'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mebel'
+          description: ''
+      tags:
+      - api
+  /api/alldata/{slug}/:
+    get:
+      operationId: retrieveMebel
+      description: ''
+      parameters:
+      - name: slug
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mebel'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateMebel
+      description: ''
+      parameters:
+      - name: slug
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Mebel'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Mebel'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Mebel'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mebel'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateMebel
+      description: ''
+      parameters:
+      - name: slug
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Mebel'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Mebel'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Mebel'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mebel'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyMebel
+      description: ''
+      parameters:
+      - name: slug
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/savat/:
+    get:
+      operationId: listSavats
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Savat'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createSavat
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Savat'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Savat'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Savat'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Savat'
+          description: ''
+      tags:
+      - api
+  /api/savat/{id}/:
+    get:
+      operationId: retrieveSavat
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this savat.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Savat'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateSavat
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this savat.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Savat'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Savat'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Savat'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Savat'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateSavat
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this savat.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Savat'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Savat'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Savat'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Savat'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroySavat
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this savat.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/user/profile/:
+    get:
+      operationId: listUserProfiles
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - api
+  /api/user/register/:
+    post:
+      operationId: createUserRegister
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+  /api/user/login/:
+    post:
+      operationId: createUserLogin
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+  /api/user/changepass/:
+    post:
+      operationId: createUserPasswordChange
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+  /api/user/send-reset-password-email/:
+    post:
+      operationId: createSendResetPasswordEmail
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+  /api/user/reset-password/{uid}/{token}/:
+    post:
+      operationId: createUserResetPasswor
+      description: ''
+      parameters:
+      - name: uid
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: token
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+components:
+  schemas:
+    Mebel:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          nullable: true
+          maxLength: 41
+        slug:
+          type: string
+          readOnly: true
+          pattern: ^[-a-zA-Z0-9_]+$
+        addres:
+          type: string
+          maxLength: 100
+        narx:
+          type: integer
+        chegirma:
+          type: integer
+        chegirma_narxi:
+          type: string
+          readOnly: true
+        like:
+          type: integer
+          nullable: true
+        razmer:
+          type: string
+          description: bo'yi,eni,qalinligi
+          maxLength: 112
+        body:
+          type: string
+        turi:
+          enum:
+          - kuxni
+          - mehmonxona
+          - devan
+          - shkaf
+          - bolalar
+          - romlar
+          type: string
+        rangi:
+          type: string
+          description: 'masalan: oq,qora,qizil,sariq'
+          maxLength: 41
+        photo:
+          type: string
+          format: binary
+        imagine:
+          type: array
+          items:
+            type: object
+            properties:
+              image:
+                type: string
+                format: binary
+                nullable: true
+          readOnly: true
+      required:
+      - addres
+      - narx
+      - razmer
+      - body
+      - rangi
+      - photo
+    Savat:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        product:
+          type: integer
+        miqdori:
+          type: integer
+        summa:
+          type: integer
+      required:
+      - product
+      - summa
